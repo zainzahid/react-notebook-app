@@ -19,27 +19,55 @@ function App() {
     handleNoteActive,
     openNoteEdit,
     closeNoteActive,
-    closeNoteEdit
+    closeNoteEdit,
+    handleNoteChange,
+    addNewNote,
+    deleteNote
   }
 
   function handleNoteActive(id) {
-    console.log('handle is called for', id);
     setEditMode(false);
     setActiveNoteId(id);
   }
 
   function closeNoteActive(id) {
-    console.log('handle is called for', id);
     setEditMode(false);
     setActiveNoteId(undefined);
   }
 
   function openNoteEdit(id) {
     setEditMode(true);
-    console.log('edit note', id)
   }
+
   function closeNoteEdit(id) {
     setEditMode(false);
+  }
+
+  function handleNoteChange(id, updatedNote) {
+    // Cloning noteList
+    const tempNoteList = [...noteList];
+    // finding index on which note need update
+    const index = tempNoteList.findIndex(note => note.id === id);
+    // updating note on found index
+    tempNoteList[index] = updatedNote;
+    // updating noteListState with updated tempNoteList
+    setNoteList(tempNoteList);
+  }
+
+  function addNewNote() {
+    const newNote = {
+      id:  new Date().toString(),
+      title: '',
+      category: '',
+      content: ''
+    };
+    setNoteList([...noteList, newNote]);
+    setEditMode(true);
+    setActiveNoteId(newNote.id);
+  }
+
+  function deleteNote(id) {
+    setNoteList(noteList.filter(note => note.id !== id));
   }
 
   return (
