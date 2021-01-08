@@ -72,15 +72,16 @@ function App() {
 
   return (
     <NotesContext.Provider value={notesContextValue}>
-      <NoteList notes={noteList} />
-      
-      <br/>
-      {
-        activeNote && !editMode && <NoteDetail note={activeNote}  />
-      }
-      {
-        activeNote && editMode && <NoteEdit note={activeNote}  />
-      }
+      <div className="sections-container">
+        <NoteList notes={noteList} />
+    
+        {
+          activeNote && !editMode && <NoteDetail note={activeNote}  />
+        }
+        {
+          activeNote && editMode && <NoteEdit note={activeNote}  />
+        }
+      </div>
       
     </NotesContext.Provider>
   );

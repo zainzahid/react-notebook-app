@@ -6,7 +6,7 @@ function NoteList({ notes }) {
     const { addNewNote } = useContext(NotesContext);
 
     return (
-        <div>
+        <div className="note-list-section bg-grey p-1">
             <button onClick={() => addNewNote()}>Add New</button>
             {
                 notes.map(( note,i) => 

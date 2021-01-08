@@ -1,3 +1,10 @@
+// Variables
+$grey: #F2F5FC;
+$s-sky: #5352ed;   
+
+//Imports
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,4 +12,90 @@
 }
 
 body {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 24px;
 }
+
+input, textarea, button {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 24px;
+}
+
+.bg {
+    &-grey {
+        background-color: $grey;
+        color: black;
+    }
+    &-white {
+        background-color: white;
+        color: black;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+// Padding
+.p {
+    &-1 {
+        padding: 1rem 1rem;
+    }
+    &-2 {
+        padding: 2rem 2rem;
+    }
+    &-3 {
+        padding: 3rem 3rem;
+    }
+    &-4 {
+        padding: 4rem 4rem;
+    }
+}
+.py {
+    &-1 {
+        padding: 1rem 0;
+    }
+    &-2 {
+        padding: 2rem 0;
+    }
+    &-3 {
+        padding: 3rem 0;
+    }
+    &-4 {
+        padding: 4rem 0;
+    }
+}
+
+// Margin
+.my {
+    &-1 {
+        margin: 1rem 0;
+    }
+    &-2 {
+        margin: 2rem 0;
+    }
+    &-3 {
+        margin: 3rem 0;
+    }
+    &-4 {
+        margin: 4rem 0;
+    }
+}
+
+.sections-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    .note-list-section {
+        .note-card {
+            padding: 1rem;
+            display: flex;
+            border-left: 4px solid $s-sky;
+            // .color-strip {
+            //     background-color: blue;
+            //     height: 100%;
+            //     width: 5%;
+            // }
+        }
+    }
+}
+

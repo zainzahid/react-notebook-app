@@ -24,7 +24,7 @@ function NoteEdit({note}) {
     }
 
     return (
-        <div>
+        <div className="p-1">
             <button onClick={ () => closeEditing() }>Close</button>
             <button onClick={ () => _deleteNote(note.id) }>Delete</button><br/>
             <input type="text" value={note.title} onChange={e => handleChange({title: e.target.value})}></input><br/>

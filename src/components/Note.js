@@ -5,8 +5,9 @@ function Note({note}) {
 
     const { handleNoteActive } = useContext(NotesContext);
     return (
-        <div onClick={() => {handleNoteActive(note.id)}}>
-            {note.title}
+        <div className="note-card bg-white my-1" onClick={() => {handleNoteActive(note.id)}}>
+            <span className="color-strip"></span>
+            <p>{note.title}</p>
         </div>
     )
 }
