@@ -1,6 +1,8 @@
 // Variables
 $grey: #F2F5FC;
-$s-sky: #5352ed;   
+$dark-grey: #7f8c8d;
+$primary: #574b90; 
+$font-family: 'Oxygen', sans-serif;  
 
 //Imports
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
@@ -12,13 +14,14 @@ $s-sky: #5352ed;
 }
 
 body {
-    font-family: 'Oxygen', sans-serif;
-    font-size: 24px;
+    font-family: $font-family;
+    font-size: 22px;
+    background-color: $grey;
 }
 
 input, textarea, button {
-    font-family: 'Oxygen', sans-serif;
-    font-size: 24px;
+    font-family: $font-family;
+    font-size: 22px;
 }
 
 .bg {
@@ -84,18 +87,86 @@ input, textarea, button {
 
 .sections-container {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    .note-list-section {
+    grid-template-columns: 1.5fr 3fr;
+    // For NoteList Component
+    .list-section {
+        height: 100vh;
+        .btn-add {
+            width: 100%;
+            background: $primary;
+            color: white;
+            padding: 0.8rem 1.10rem;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            outline:none;
+            letter-spacing: 0.5px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
         .note-card {
             padding: 1rem;
-            display: flex;
-            border-left: 4px solid $s-sky;
-            // .color-strip {
-            //     background-color: blue;
-            //     height: 100%;
-            //     width: 5%;
-            // }
+            border-left: 4px solid $primary;
+            margin: 1.5rem 0;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+            .note-info {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+                &-item {
+                    font-size: 0.8rem;
+                    color: $dark-grey;
+                }
+            }
         }
+    }
+
+    // For NoteDetail & NoteEdit Components
+    .detail-section{
+        border-radius: 12px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background: white;
+        margin: 1rem 1rem;
+        padding: 0.5rem 1.5rem;
+        display: flex;
+        flex-direction: column;  
+        &-btn {
+            display: flex;
+            justify-content: flex-end;
+            &-edit, &-close, &-save, &-delete  {
+                margin: 0 0.5rem;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            &-edit {
+                margin-top: 2px;
+            }
+        }
+        &-title {
+            color: $primary;
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+        &-cat {
+            font-size: 20px;
+            color: $primary;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        &-content {
+            font-size: 18px;
+        }
+        input, textarea {
+            border-radius: 5px;
+            border: solid 1.8px #D3D3D3;
+            padding: 2px 5px 2px 10px;
+            // box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+            outline: none;
+        }    
     }
 }
 

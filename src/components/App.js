@@ -91,13 +91,15 @@ const exampleNoteList = [{
   id: 1,
   title: 'Note 1',
   category: 'Important',
-  content: 'This is very important note.'
+  content: 'This is very important note.',
+  date: '05/01/20'
 },
 {
   id: 2,
   title: 'Note 2',
   category: 'Education',
-  content: 'This is very education note.'
+  content: 'This is very education note.',
+  date: '05/01/20'
 }];
 
 export default App;

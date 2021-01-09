@@ -7,12 +7,13 @@
 
 body {
   font-family: "Oxygen", sans-serif;
-  font-size: 24px;
+  font-size: 22px;
+  background-color: #F2F5FC;
 }
 
 input, textarea, button {
   font-family: "Oxygen", sans-serif;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .bg-grey {
@@ -69,12 +70,83 @@ input, textarea, button {
 
 .sections-container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1.5fr 3fr;
 }
-.sections-container .note-list-section .note-card {
+.sections-container .list-section {
+  height: 100vh;
+}
+.sections-container .list-section .btn-add {
+  width: 100%;
+  background: #574b90;
+  color: white;
+  padding: 0.8rem 1.1rem;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  letter-spacing: 0.5px;
+}
+.sections-container .list-section .btn-add:hover {
+  cursor: pointer;
+}
+.sections-container .list-section .note-card {
   padding: 1rem;
+  border-left: 4px solid #574b90;
+  margin: 1.5rem 0;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+.sections-container .list-section .note-card .note-info {
   display: flex;
-  border-left: 4px solid #5352ed;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.sections-container .list-section .note-card .note-info-item {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+}
+.sections-container .detail-section {
+  border-radius: 12px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background: white;
+  margin: 1rem 1rem;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.sections-container .detail-section-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.sections-container .detail-section-btn-edit, .sections-container .detail-section-btn-close, .sections-container .detail-section-btn-save, .sections-container .detail-section-btn-delete {
+  margin: 0 0.5rem;
+}
+.sections-container .detail-section-btn-edit:hover, .sections-container .detail-section-btn-close:hover, .sections-container .detail-section-btn-save:hover, .sections-container .detail-section-btn-delete:hover {
+  cursor: pointer;
+}
+.sections-container .detail-section-btn-edit {
+  margin-top: 2px;
+}
+.sections-container .detail-section-title {
+  color: #574b90;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.sections-container .detail-section-cat {
+  font-size: 20px;
+  color: #574b90;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.sections-container .detail-section-content {
+  font-size: 18px;
+}
+.sections-container .detail-section input, .sections-container .detail-section textarea {
+  border-radius: 5px;
+  border: solid 1.8px #D3D3D3;
+  padding: 2px 5px 2px 10px;
+  outline: none;
 }
 
 /*# sourceMappingURL=App.css.map */

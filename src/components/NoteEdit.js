@@ -24,12 +24,15 @@ function NoteEdit({note}) {
     }
 
     return (
-        <div className="p-1">
-            <button onClick={ () => closeEditing() }>Close</button>
-            <button onClick={ () => _deleteNote(note.id) }>Delete</button><br/>
-            <input type="text" value={note.title} onChange={e => handleChange({title: e.target.value})}></input><br/>
-            <input type="text" value={note.category} onChange={e => handleChange({category: e.target.value})}></input><br/>
-            <textarea value={note.content} onChange={e => handleChange({content: e.target.value})}></textarea>
+        <div className="p-1 detail-section p-1">
+            <div className="detail-section-btn">
+                {/* <a className="detail-section-btn-save" onClick={ () => closeEditing() }><i class="fa fa-save"></i></a><br/>     */}
+                <a className="detail-section-btn-delete" onClick={ () => _deleteNote(note.id) }><i class="fa fa-trash"></i></a><br/>
+                <a className="detail-section-btn-close" onClick={ () => closeEditing() }>&#10006;</a>    
+            </div>
+            <input className="detail-section-title" type="text" value={note.title} onChange={e => handleChange({title: e.target.value})}></input>
+            <input className="detail-section-cat" type="text" value={note.category} onChange={e => handleChange({category: e.target.value})}></input>
+            <textarea className="detail-section-content" value={note.content} onChange={e => handleChange({content: e.target.value})} rows="10"></textarea>
         </div>
     )
 }
