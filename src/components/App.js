@@ -59,7 +59,8 @@ function App() {
       id:  new Date().toString(),
       title: '',
       category: '',
-      content: ''
+      content: '',
+      date: new Date().toLocaleDateString()
     };
     setNoteList([...noteList, newNote]);
     setEditMode(true);
@@ -92,14 +93,14 @@ const exampleNoteList = [{
   title: 'Note 1',
   category: 'Important',
   content: 'This is very important note.',
-  date: '05/01/20'
+  date: new Date().toLocaleDateString()
 },
 {
   id: 2,
   title: 'Note 2',
   category: 'Education',
   content: 'This is very education note.',
-  date: '05/01/20'
+  date: new Date().toLocaleDateString()
 }];
 
 export default App;

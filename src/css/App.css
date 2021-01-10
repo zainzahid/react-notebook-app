@@ -11,9 +11,10 @@ body {
   background-color: #F2F5FC;
 }
 
-input, textarea, button {
+input, textarea, button, a {
   font-family: "Oxygen", sans-serif;
   font-size: 22px;
+  text-decoration: none;
 }
 
 .bg-grey {
@@ -118,14 +119,11 @@ input, textarea, button {
   display: flex;
   justify-content: flex-end;
 }
-.sections-container .detail-section-btn-edit, .sections-container .detail-section-btn-close, .sections-container .detail-section-btn-save, .sections-container .detail-section-btn-delete {
+.sections-container .detail-section-btn-close, .sections-container .detail-section-btn-save, .sections-container .detail-section-btn-delete {
   margin: 0 0.5rem;
 }
-.sections-container .detail-section-btn-edit:hover, .sections-container .detail-section-btn-close:hover, .sections-container .detail-section-btn-save:hover, .sections-container .detail-section-btn-delete:hover {
+.sections-container .detail-section-btn-close:hover, .sections-container .detail-section-btn-save:hover, .sections-container .detail-section-btn-delete:hover {
   cursor: pointer;
-}
-.sections-container .detail-section-btn-edit {
-  margin-top: 2px;
 }
 .sections-container .detail-section-title {
   color: #574b90;
