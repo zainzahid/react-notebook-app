@@ -6,7 +6,7 @@ function NoteDetail({ note }) {
     return (
         <div className="p-1 detail-section" onClick={() => {openNoteEdit(note.id)}}>
             <div className="detail-section-btn">
-                <a href="!#" className="detail-section-btn-edit" onClick={ () => {openNoteEdit(note.id)} }><i class="fa fa-edit"></i></a>
+                <a href="!#" className="detail-section-btn-edit" onClick={ () => {openNoteEdit(note.id)} }><i className="fa fa-edit"></i></a>
                 <a href="!#" className="detail-section-btn-close" onClick={ () => { closeNoteActive()} }>&#10006;</a>
             </div>
             <h3 className="detail-section-title">{note.title}</h3>

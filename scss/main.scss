@@ -166,7 +166,11 @@ input, textarea, button, a {
             padding: 2px 5px 2px 10px;
             // box-shadow: 0 0 5pt 0.5pt #D3D3D3;
             outline: none;
+            width: 100%;
         }    
     }
 }
+
+// Import for mobile scss
+@import 'mobile';
 

@@ -1,0 +1,10 @@
+ /* Smartphones */
+ @media only screen and (max-width: 500px) {
+     .sections-container {
+        display: grid;
+        grid-template-columns: 1fr;
+     }
+     .div-hide {
+         display: none;
+     }
+ }

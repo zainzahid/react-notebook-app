@@ -147,6 +147,19 @@ input, textarea, button, a {
   border: solid 1.8px #D3D3D3;
   padding: 2px 5px 2px 10px;
   outline: none;
+  width: 100%;
+}
+
+/* Smartphones */
+@media only screen and (max-width: 500px) {
+  .sections-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .div-hide {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

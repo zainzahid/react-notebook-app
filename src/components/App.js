@@ -28,6 +28,7 @@ function App() {
   function handleNoteActive(id) {
     setEditMode(false);
     setActiveNoteId(id);
+    
   }
 
   function closeNoteActive(id) {
