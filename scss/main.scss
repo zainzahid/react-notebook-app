@@ -139,8 +139,9 @@ input, textarea, button, a {
         &-btn {
             display: flex;
             justify-content: flex-end;
-            &-close, &-save, &-delete  {
+            &-close, &-save, &-delete, &-edit  {
                 margin: 0 0.5rem;
+                color: $primary;
                 &:hover {
                     cursor: pointer;
                 }

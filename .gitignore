@@ -9,10 +9,10 @@
 /coverage
 
 # production
-/build
+#/build
 
 # eslintcahe
-.eslintcahe
+.eslintcache
 
 # misc
 .DS_Store

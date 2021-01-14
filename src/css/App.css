@@ -122,10 +122,11 @@ input, textarea, button, a {
   display: flex;
   justify-content: flex-end;
 }
-.sections-container .detail-section-btn-close, .sections-container .detail-section-btn-save, .sections-container .detail-section-btn-delete {
+.sections-container .detail-section-btn-close, .sections-container .detail-section-btn-save, .sections-container .detail-section-btn-delete, .sections-container .detail-section-btn-edit {
   margin: 0 0.5rem;
+  color: #574b90;
 }
-.sections-container .detail-section-btn-close:hover, .sections-container .detail-section-btn-save:hover, .sections-container .detail-section-btn-delete:hover {
+.sections-container .detail-section-btn-close:hover, .sections-container .detail-section-btn-save:hover, .sections-container .detail-section-btn-delete:hover, .sections-container .detail-section-btn-edit:hover {
   cursor: pointer;
 }
 .sections-container .detail-section-btn-edit {
