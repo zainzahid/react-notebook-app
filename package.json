@@ -1,6 +1,6 @@
 {
   "name": "note-taking-app",
-  "homepage": ".",
+  "homepage": "https://github.com/zainzahid/react-notebook-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass scss/main.scss src/css/App.css --watch"
+    "sass": "sass scss/main.scss src/css/App.css --watch",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
