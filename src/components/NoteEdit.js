@@ -27,8 +27,8 @@ function NoteEdit({note}) {
         <div className="p-1 detail-section p-1">
             <div className="detail-section-btn my-1">
                 {/* <a className="detail-section-btn-save" onClick={ () => closeEditing() }><i className="fa fa-save"></i></a><br/>     */}
-                <a href="!#" className="detail-section-btn-delete" onClick={ () => _deleteNote(note.id) }><i className="fa fa-trash"></i></a><br/>
-                <a href="!#" className="detail-section-btn-close" onClick={ () => closeEditing() }>&#10006;</a>    
+                <a className="detail-section-btn-delete" onClick={ () => _deleteNote(note.id) }><i className="fa fa-trash"></i></a><br/>
+                <a className="detail-section-btn-close" onClick={ () => closeEditing() }>&#10006;</a>    
             </div>
             <input 
                 className="detail-section-title"
