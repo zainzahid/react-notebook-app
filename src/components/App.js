@@ -94,19 +94,6 @@ function App() {
   );
 }
 
-const exampleNoteList = [{
-  id: 1,
-  title: 'Note 1',
-  category: 'Important',
-  content: 'This is very important note.',
-  date: new Date().toLocaleDateString()
-},
-{
-  id: 2,
-  title: 'Note 2',
-  category: 'Education',
-  content: 'This is a very educational note.',
-  date: new Date().toLocaleDateString()
-}];
+const exampleNoteList = [];
 
 export default App;
