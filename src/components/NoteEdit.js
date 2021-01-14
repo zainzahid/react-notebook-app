@@ -30,9 +30,25 @@ function NoteEdit({note}) {
                 <a href="!#" className="detail-section-btn-delete" onClick={ () => _deleteNote(note.id) }><i className="fa fa-trash"></i></a><br/>
                 <a href="!#" className="detail-section-btn-close" onClick={ () => closeEditing() }>&#10006;</a>    
             </div>
-            <input className="detail-section-title" type="text" value={note.title} onChange={e => handleChange({title: e.target.value})}></input>
-            <input className="detail-section-cat" type="text" value={note.category} onChange={e => handleChange({category: e.target.value})}></input>
-            <textarea className="detail-section-content" value={note.content} onChange={e => handleChange({content: e.target.value})} rows="10"></textarea>
+            <input 
+                className="detail-section-title"
+                placeholder="Title Here" 
+                type="text" value={note.title} 
+                onChange={e => handleChange({title: e.target.value})}>
+            </input>
+            <input 
+                className="detail-section-cat"
+                placeholder="Category Here" 
+                type="text" value={note.category} 
+                onChange={e => handleChange({category: e.target.value})}>
+            </input>
+            <textarea 
+                className="detail-section-content"
+                placeholder="Your Note Here..." 
+                value={note.content} 
+                onChange={e => handleChange({content: e.target.value})} 
+                rows="10">
+            </textarea>
         </div>
     )
 }

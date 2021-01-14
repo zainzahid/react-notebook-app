@@ -3,10 +3,12 @@ import Note from './Note';
 import { NotesContext } from './App';
 
 function NoteList({ notes }) {
-    const { addNewNote } = useContext(NotesContext);
+    const { addNewNote, isNoteActive } = useContext(NotesContext);
+
+    const classes = ["list-section", "p-1", isNoteActive() ? "div-hide" : "div-show"].join(" ");
 
     return (
-        <div className="list-section p-1">
+        <div className={classes}>
             <button className="btn-add" onClick={() => addNewNote()}>Add New Note</button>
             {
                 notes.map(( note,i) => 

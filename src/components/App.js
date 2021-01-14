@@ -22,7 +22,8 @@ function App() {
     closeNoteEdit,
     handleNoteChange,
     addNewNote,
-    deleteNote
+    deleteNote,
+    isNoteActive
   }
 
   function handleNoteActive(id) {
@@ -72,16 +73,20 @@ function App() {
     setNoteList(noteList.filter(note => note.id !== id));
   }
 
+  function isNoteActive() {
+    return activeNote === undefined ? false: true;
+  }
+
   return (
     <NotesContext.Provider value={notesContextValue}>
       <div className="sections-container">
         <NoteList notes={noteList} />
     
         {
-          activeNote && !editMode && <NoteDetail note={activeNote}  />
+          isNoteActive() && !editMode && <NoteDetail note={activeNote}  />
         }
         {
-          activeNote && editMode && <NoteEdit note={activeNote}  />
+          isNoteActive() && editMode && <NoteEdit note={activeNote}  />
         }
       </div>
       
@@ -100,7 +105,7 @@ const exampleNoteList = [{
   id: 2,
   title: 'Note 2',
   category: 'Education',
-  content: 'This is very education note.',
+  content: 'This is a very educational note.',
   date: new Date().toLocaleDateString()
 }];
 

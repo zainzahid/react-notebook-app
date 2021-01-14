@@ -121,6 +121,9 @@ input, textarea, button, a {
                     color: $dark-grey;
                 }
             }
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -130,7 +133,7 @@ input, textarea, button, a {
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background: white;
         margin: 1rem 1rem;
-        padding: 0.5rem 1.5rem;
+        padding: 0.5rem 1.5rem 1.5rem 1.8rem ;
         display: flex;
         flex-direction: column;  
         &-btn {
@@ -141,6 +144,9 @@ input, textarea, button, a {
                 &:hover {
                     cursor: pointer;
                 }
+            }
+            &-edit {
+                margin-top: 2px;
             }
         }
         &-title {
@@ -173,4 +179,3 @@ input, textarea, button, a {
 
 // Import for mobile scss
 @import 'mobile';
-
