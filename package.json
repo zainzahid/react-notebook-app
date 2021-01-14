@@ -1,6 +1,6 @@
 {
   "name": "note-taking-app",
-  "homepage": "https://zainzahid.github.io/react-notebook-app/",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
